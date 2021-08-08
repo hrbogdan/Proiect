@@ -1,22 +1,39 @@
-<app-body></app-body>
+<div class="events-edit-section">
+  <app-body></app-body>
 
-<div *ngFor="let event of eventsService.events">
-  {{ event.title }}
-  <button
-    mat-raised-button
-    class="deleteEvent"
-    type="submit"
-    (click)="deleteEvent(event)"
-  >
-    Delete Event
-  </button>
-  <!--
-  <button
-    mat-raised-button
-    class="editEvent"
-    type="submit"
-    (click)="editEvent(event)"
-  >
-    Edit Event
-  </button> -->
+  <div *ngFor="let event of eventsService.events">
+    {{ event.title }}
+    <button
+      mat-raised-button
+      class="deleteEvent"
+      type="submit"
+      (click)="deleteEvent(event)"
+    >
+      Delete Event
+    </button>
+    <!--
+    <button
+      mat-raised-button
+      class="editEvent"
+      type="submit"
+      (click)="editEvent(event)"
+    >
+      Edit Event
+    </button> -->
+  </div>
+</div>
+
+<div class="team-edit-section">
+  <app-team-edit></app-team-edit>
+  <div *ngFor="let team of teamService.member">
+    {{ team.fullName }}
+    <button
+      mat-raised-button
+      class="deleteMember"
+      type="submit"
+      (click)="deleteMember(team)"
+    >
+      Delete member
+    </button>
+  </div>
 </div>

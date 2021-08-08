@@ -19,9 +19,6 @@
           autofocus
           ngModel
         />
-        <div class="alert-danger" role="alert" *ngIf="isFirstNameValid">
-          First name is required.
-        </div>
       </mat-form-field>
       <mat-form-field>
         <input
@@ -33,9 +30,6 @@
           required
           ngModel
         />
-        <div class="alert-danger" role="alert" *ngIf="isSecondNameValid">
-          Second name is required.
-        </div>
       </mat-form-field>
       <mat-form-field>
         <input
@@ -47,10 +41,6 @@
           required
           ngModel
         />
-        <div class="alert-danger" role="alert" *ngIf="">
-          E-mail is required.
-        </div>
-        <div class="alert-danger" role="alert" *ngIf="">E-mail is invalid.</div>
       </mat-form-field>
 
       <mat-form-field>
@@ -63,9 +53,6 @@
           required
           ngModel
         ></textarea>
-        <div class="alert-danger" role="alert" *ngIf="isMessageValid">
-          This field is required.
-        </div>
       </mat-form-field>
       <button mat-raised-button type="submit" [disabled]="checkInputs()">
         Send it

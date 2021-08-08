@@ -1,0 +1,74 @@
+<div fxLayoutAlign="center center" fxFlexFill class="team-main-div">
+  <mat-card id="team-mobile">
+    <mat-toolbar color="primary">Team edit component</mat-toolbar>
+    <form
+      fxLayoutAlign="stretch"
+      fxLayout="column"
+      class="team-form"
+      (ngSubmit)="addMember(teamForm)"
+      #teamForm="ngForm"
+    >
+      <mat-form-field>
+        <input
+          matInput
+          id="photo"
+          name="photo"
+          placeholder="Insert link photo"
+          type="text"
+          required
+          autofocus
+          ngModel
+        />
+      </mat-form-field>
+      <mat-form-field>
+        <input
+          matInput
+          id="fullName"
+          name="fullName"
+          placeholder="Type full name"
+          type="text"
+          required
+          autofocus
+          ngModel
+        />
+      </mat-form-field>
+      <mat-form-field>
+        <input
+          matInput
+          id="role"
+          name="role"
+          placeholder="Type the role"
+          type="text"
+          required
+          ngModel
+        />
+      </mat-form-field>
+      <mat-form-field>
+        <input
+          matInput
+          id="phone"
+          name="phone"
+          placeholder="Type the phone number"
+          type="text"
+          required
+          ngModel
+        />
+      </mat-form-field>
+
+      <mat-form-field>
+        <input
+          matInput
+          id="mail"
+          name="mail"
+          placeholder="Type the mail"
+          type="text"
+          required
+          ngModel
+        />
+      </mat-form-field>
+      <button mat-raised-button type="submit" [disabled]="checkTeamInputs()">
+        Add team member
+      </button>
+    </form>
+  </mat-card>
+</div>

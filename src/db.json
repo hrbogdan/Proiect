@@ -8,5 +8,31 @@
       "id": 1
     }
   ],
-  "contact": []
+  "contact": [
+    {
+      "firstName": "alexandru",
+      "secondName": "ion",
+      "email": "a.ion@ion.com",
+      "message": "alexandrion",
+      "id": 1
+    }
+  ],
+  "team": [
+    {
+      "photo": "www",
+      "fullName": "ww",
+      "role": "312",
+      "phone": "123",
+      "mail": "123",
+      "id": 1
+    },
+    {
+      "photo": "ww",
+      "fullName": "ww",
+      "role": "312",
+      "phone": "123",
+      "mail": "123",
+      "id": 2
+    }
+  ]
 }

@@ -1,0 +1,17 @@
+.main-div mat-card {
+  padding: 0px;
+}
+
+.login-form {
+  padding: 20px;
+}
+
+.mobile-width {
+  width: 45%;
+}
+
+@media only screen and (max-width: 800px) {
+  .mobile-width {
+    width: 90%;
+  }
+}

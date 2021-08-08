@@ -1,17 +1,17 @@
-.team-main-div {
+.main-div mat-card {
   padding: 0px;
 }
 
-.add-event-form {
+.team-form {
   padding: 20px;
 }
 
-#add-event-mobile {
+#team-mobile {
   width: 45%;
 }
 
 @media only screen and (max-width: 800px) {
-  #add-event-mobile {
+  #team-mobile {
     width: 90%;
   }
 }

@@ -11,17 +11,6 @@ import {
   styleUrls: ['./contact.component.css'],
 })
 export class ContactComponent implements OnInit {
-  isFirstNameValid = false;
-  isSecondNameValid = false;
-  isMessageValid = false;
-
-  onSubmit(contactForm: NgForm) {
-    console.log(contactForm);
-    if (!contactForm.valid) {
-      this.isFirstNameValid = true;
-    }
-  }
-
   checkInputs() {
     const firstName: any = document.getElementById('firstName');
     const secondName: any = document.getElementById('secondName');

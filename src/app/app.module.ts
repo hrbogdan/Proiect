@@ -29,6 +29,8 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { EventDetailComponent } from './event-detail/event-detail.component';
 import { BodyComponent } from './dashboard/body/body.component';
+import { TeamComponent } from './team/team.component';
+import { TeamEditComponent } from './dashboard/team-edit/team-edit.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +45,8 @@ import { BodyComponent } from './dashboard/body/body.component';
     DashboardComponent,
     EventDetailComponent,
     BodyComponent,
+    TeamComponent,
+    TeamEditComponent,
   ],
   imports: [
     BrowserModule,

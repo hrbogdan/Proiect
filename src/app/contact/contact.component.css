@@ -1,0 +1,17 @@
+.main-div mat-card {
+  padding: 0px;
+}
+
+.contact-form {
+  padding: 20px;
+}
+
+#contact-mobile {
+  width: 65%;
+}
+
+@media only screen and (max-width: 800px) {
+  #contact-mobile {
+    width: 90%;
+  }
+}
