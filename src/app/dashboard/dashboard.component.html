@@ -1,0 +1,22 @@
+<app-body></app-body>
+
+<div *ngFor="let event of eventsService.events">
+  {{ event.title }}
+  <button
+    mat-raised-button
+    class="deleteEvent"
+    type="submit"
+    (click)="deleteEvent(event)"
+  >
+    Delete Event
+  </button>
+  <!--
+  <button
+    mat-raised-button
+    class="editEvent"
+    type="submit"
+    (click)="editEvent(event)"
+  >
+    Edit Event
+  </button> -->
+</div>

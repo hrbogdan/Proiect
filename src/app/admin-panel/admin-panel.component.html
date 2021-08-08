@@ -1,0 +1,42 @@
+<div fxLayoutAlign="center center" fxFlexFill class="main-div">
+  <mat-card class="mobile-width">
+    <mat-toolbar color="primary">Admin Page</mat-toolbar>
+    <form
+      fxLayoutAlign="stretch"
+      fxLayout="column"
+      class="login-form"
+      (ngSubmit)="onSubmit(signInForm)"
+      #signInForm="ngForm"
+    >
+      <mat-form-field>
+        <input
+          matInput
+          placeholder="Username"
+          type="user"
+          name="user"
+          required
+          autofocus
+          ngModel
+        />
+      </mat-form-field>
+
+      <mat-form-field>
+        <input
+          matInput
+          type="password"
+          placeholder="Password"
+          name="password"
+          required
+          ngModel
+        />
+      </mat-form-field>
+      <button mat-raised-button type="submit">Login</button>
+      <div class="alert-danger" role="alert" *ngIf="isFormInvalid">
+        Please fill all fields
+      </div>
+      <div class="alert-danger" role="alert" *ngIf="areCredentialsIsInvalid">
+        Invalid user or password
+      </div>
+    </form>
+  </mat-card>
+</div>

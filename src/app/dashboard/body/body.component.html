@@ -1,0 +1,53 @@
+<mat-card fxFlex="25">
+  <mat-toolbar color="primary">add events</mat-toolbar>
+  <form
+    fxLayoutAlign="stretch"
+    fxLayout="column"
+    class="add-event"
+    (ngSubmit)="addEvent(Event)"
+    #Event="ngForm"
+  >
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="Title"
+        type="text"
+        name="title"
+        required
+        autofocus
+        ngModel
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="Description"
+        type="text"
+        name="description"
+        required
+        ngModel
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="Date"
+        type="date"
+        name="date"
+        required
+        ngModel
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="Image url"
+        type="text"
+        name="image"
+        ngModel
+      />
+    </mat-form-field>
+
+    <button mat-raised-button class="addEvent" type="submit">Add Event</button>
+  </form></mat-card
+>

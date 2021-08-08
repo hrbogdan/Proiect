@@ -1,0 +1,83 @@
+<div fxLayoutAlign="center center" fxFlexFill class="main-div">
+  <mat-card id="contact-mobile">
+    <mat-toolbar color="primary">Contact Page</mat-toolbar>
+    <form
+      fxLayoutAlign="stretch"
+      fxLayout="column"
+      class="contact-form"
+      (ngSubmit)="addContacts(contactForm)"
+      #contactForm="ngForm"
+    >
+      <mat-form-field>
+        <input
+          matInput
+          id="firstName"
+          name="firstName"
+          placeholder="First Name"
+          type="text"
+          required
+          autofocus
+          ngModel
+        />
+        <div class="alert-danger" role="alert" *ngIf="isFirstNameValid">
+          First name is required.
+        </div>
+      </mat-form-field>
+      <mat-form-field>
+        <input
+          matInput
+          id="secondName"
+          name="secondName"
+          placeholder="Second Name"
+          type="text"
+          required
+          ngModel
+        />
+        <div class="alert-danger" role="alert" *ngIf="isSecondNameValid">
+          Second name is required.
+        </div>
+      </mat-form-field>
+      <mat-form-field>
+        <input
+          matInput
+          id="email"
+          name="email"
+          placeholder="E-mail"
+          type="text"
+          required
+          ngModel
+        />
+        <div class="alert-danger" role="alert" *ngIf="">
+          E-mail is required.
+        </div>
+        <div class="alert-danger" role="alert" *ngIf="">E-mail is invalid.</div>
+      </mat-form-field>
+
+      <mat-form-field>
+        <textarea
+          matInput
+          cdkTextareaAutosize
+          id="message"
+          name="message"
+          placeholder="Write your message"
+          required
+          ngModel
+        ></textarea>
+        <div class="alert-danger" role="alert" *ngIf="isMessageValid">
+          This field is required.
+        </div>
+      </mat-form-field>
+      <button mat-raised-button type="submit" [disabled]="checkInputs()">
+        Send it
+      </button>
+      <!--
+        <div class="alert-danger" role="alert" *ngIf="isFormInvalid">
+          Please fill all fields
+        </div>
+        <div class="alert-danger" role="alert" *ngIf="areCredentialsIsInvalid">
+          Invalid e-mail adress
+        </div>
+  -->
+    </form>
+  </mat-card>
+</div>

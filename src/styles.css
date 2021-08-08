@@ -1,1 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+html,
+body {
+  height: 100vh;
+  background-image: linear-gradient(180deg, #1e77a5, #6af2d8);
+  background-repeat: no-repeat;
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  text-align: left;
+}
+
+.wrapper {
+  padding: 15px 15px;
+}
