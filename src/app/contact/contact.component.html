@@ -1,70 +1,67 @@
-<div fxLayoutAlign="center center" fxFlexFill class="main-div">
-  <mat-card id="contact-mobile">
-    <mat-toolbar color="primary">Contact Page</mat-toolbar>
-    <form
-      fxLayoutAlign="stretch"
-      fxLayout="column"
-      class="contact-form"
-      (ngSubmit)="addContacts(contactForm)"
-      #contactForm="ngForm"
-    >
-      <mat-form-field>
-        <input
-          matInput
-          id="firstName"
-          name="firstName"
-          placeholder="First Name"
-          type="text"
-          required
-          autofocus
-          ngModel
-        />
-      </mat-form-field>
-      <mat-form-field>
-        <input
-          matInput
-          id="secondName"
-          name="secondName"
-          placeholder="Second Name"
-          type="text"
-          required
-          ngModel
-        />
-      </mat-form-field>
-      <mat-form-field>
-        <input
-          matInput
-          id="email"
-          name="email"
-          placeholder="E-mail"
-          type="text"
-          required
-          ngModel
-        />
-      </mat-form-field>
+<div class="contact-wrapper">
+  <div fxLayoutAlign="center center" fxFlexFill class="main-div">
+    <mat-card id="contact-mobile">
+      <mat-toolbar color="primary">Contact Page</mat-toolbar>
+      <form
+        fxLayoutAlign="stretch"
+        fxLayout="column"
+        class="contact-form"
+        (ngSubmit)="addContacts(contactForm)"
+        #contactForm="ngForm"
+      >
+        <mat-form-field>
+          <input
+            matInput
+            id="firstName"
+            name="firstName"
+            placeholder="First Name"
+            type="text"
+            required
+            autofocus
+            ngModel
+          />
+        </mat-form-field>
+        <mat-form-field>
+          <input
+            matInput
+            id="secondName"
+            name="secondName"
+            placeholder="Second Name"
+            type="text"
+            required
+            ngModel
+          />
+        </mat-form-field>
+        <mat-form-field>
+          <input
+            matInput
+            id="email"
+            name="email"
+            placeholder="E-mail"
+            type="text"
+            required
+            ngModel
+          />
+        </mat-form-field>
 
-      <mat-form-field>
-        <textarea
-          matInput
-          cdkTextareaAutosize
-          id="message"
-          name="message"
-          placeholder="Write your message"
-          required
-          ngModel
-        ></textarea>
-      </mat-form-field>
-      <button mat-raised-button type="submit" [disabled]="checkInputs()">
-        Send it
-      </button>
-      <!--
-        <div class="alert-danger" role="alert" *ngIf="isFormInvalid">
-          Please fill all fields
-        </div>
-        <div class="alert-danger" role="alert" *ngIf="areCredentialsIsInvalid">
-          Invalid e-mail adress
-        </div>
-  -->
-    </form>
-  </mat-card>
+        <mat-form-field>
+          <textarea
+            matInput
+            cdkTextareaAutosize
+            id="message"
+            name="message"
+            placeholder="Write your message"
+            required
+            ngModel
+          ></textarea>
+        </mat-form-field>
+        <button mat-raised-button type="submit" [disabled]="!contactForm.valid">
+          Send it
+        </button>
+      </form>
+    </mat-card>
+    <!-- <div style="width: 500px; height: 500px" *ngIf="contactForm.submitted">
+    Your message was sent.
+  </div> -->
+  </div>
 </div>

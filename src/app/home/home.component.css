@@ -1,0 +1,204 @@
+/* glitch */
+.wrapper {
+  height: 50vh;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper h1.glitch {
+  color: white;
+  font-family: sans-serif;
+  font-weight: 800;
+  position: relative;
+  font-size: 100px;
+  padding: 30px;
+}
+.wrapper h1.glitch::before,
+.wrapper h1.glitch::after {
+  padding: 30px;
+  color: white;
+  content: "ITFest";
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+}
+.wrapper h1.glitch::before {
+  left: 3px;
+  text-shadow: -2px 0 red;
+  animation-name: glitch-animation-1;
+  animation-duration: 2.5s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: reverse-alternate;
+}
+.wrapper h1.glitch::after {
+  left: -3px;
+  text-shadow: -2px 0 blue;
+  animation-name: glitch-animation-2;
+  animation-duration: 2.5s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: reverse-alternate;
+}
+
+@keyframes glitch-animation-1 {
+  0% {
+    clip: rect(118px, 350px, 119px, 30px);
+  }
+  5% {
+    clip: rect(140px, 350px, 108px, 30px);
+  }
+  10% {
+    clip: rect(116px, 350px, 69px, 30px);
+  }
+  15% {
+    clip: rect(30px, 350px, 42px, 30px);
+  }
+  20% {
+    clip: rect(80px, 350px, 145px, 30px);
+  }
+  25% {
+    clip: rect(92px, 350px, 40px, 30px);
+  }
+  30% {
+    clip: rect(57px, 350px, 79px, 30px);
+  }
+  35% {
+    clip: rect(123px, 350px, 4px, 30px);
+  }
+  40% {
+    clip: rect(89px, 350px, 147px, 30px);
+  }
+  45% {
+    clip: rect(37px, 350px, 49px, 30px);
+  }
+  50% {
+    clip: rect(140px, 350px, 86px, 30px);
+  }
+  55% {
+    clip: rect(51px, 350px, 110px, 30px);
+  }
+  60% {
+    clip: rect(16px, 350px, 28px, 30px);
+  }
+  65% {
+    clip: rect(100px, 350px, 122px, 30px);
+  }
+  70% {
+    clip: rect(39px, 350px, 127px, 30px);
+  }
+  75% {
+    clip: rect(139px, 350px, 29px, 30px);
+  }
+  80% {
+    clip: rect(49px, 350px, 67px, 30px);
+  }
+  85% {
+    clip: rect(45px, 350px, 116px, 30px);
+  }
+  90% {
+    clip: rect(68px, 350px, 142px, 30px);
+  }
+  95% {
+    clip: rect(10px, 350px, 72px, 30px);
+  }
+  100% {
+    clip: rect(99px, 350px, 124px, 30px);
+  }
+}
+@keyframes glitch-animation-2 {
+  0% {
+    clip: rect(116px, 350px, 146px, 30px);
+  }
+  5% {
+    clip: rect(97px, 350px, 70px, 30px);
+  }
+  10% {
+    clip: rect(109px, 350px, 60px, 30px);
+  }
+  15% {
+    clip: rect(28px, 350px, 112px, 30px);
+  }
+  20% {
+    clip: rect(110px, 350px, 105px, 30px);
+  }
+  25% {
+    clip: rect(97px, 350px, 124px, 30px);
+  }
+  30% {
+    clip: rect(26px, 350px, 95px, 30px);
+  }
+  35% {
+    clip: rect(26px, 350px, 74px, 30px);
+  }
+  40% {
+    clip: rect(113px, 350px, 54px, 30px);
+  }
+  45% {
+    clip: rect(84px, 350px, 85px, 30px);
+  }
+  50% {
+    clip: rect(105px, 350px, 5px, 30px);
+  }
+  55% {
+    clip: rect(149px, 350px, 69px, 30px);
+  }
+  60% {
+    clip: rect(60px, 350px, 145px, 30px);
+  }
+  65% {
+    clip: rect(18px, 350px, 58px, 30px);
+  }
+  70% {
+    clip: rect(141px, 350px, 138px, 30px);
+  }
+  75% {
+    clip: rect(18px, 350px, 68px, 30px);
+  }
+  80% {
+    clip: rect(123px, 350px, 94px, 30px);
+  }
+  85% {
+    clip: rect(24px, 350px, 127px, 30px);
+  }
+  90% {
+    clip: rect(109px, 350px, 76px, 30px);
+  }
+  95% {
+    clip: rect(32px, 350px, 53px, 30px);
+  }
+  100% {
+    clip: rect(53px, 350px, 28px, 30px);
+  }
+}
+
+/* home buttons */
+.btns {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.btn1,
+.btn2 {
+  font-size: 2rem;
+
+  width: auto;
+  min-width: 140px;
+  height: auto;
+  padding: 0 1rem 0 1rem;
+  color: #ffffff;
+  background-color: rgba(10, 10, 51, 0.9);
+  font-weight: bold;
+  text-align: center;
+  line-height: 70px;
+  border-radius: 20px;
+}
+
+.btn1:hover,
+.btn2:hover {
+  background-color: #2482a9;
+}

@@ -17,6 +17,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { TextFieldModule } from '@angular/cdk/text-field';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatTableModule } from '@angular/material/table';
 
 // Components
 import { AdminPanelComponent } from './admin-panel/admin-panel.component';
@@ -61,6 +63,8 @@ import { TeamEditComponent } from './dashboard/team-edit/team-edit.component';
     MatButtonModule,
     MatCardModule,
     MatToolbarModule,
+    MatPaginatorModule,
+    MatTableModule,
     TextFieldModule,
     FlexLayoutModule,
   ],

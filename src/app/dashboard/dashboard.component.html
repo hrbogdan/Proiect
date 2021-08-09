@@ -11,15 +11,20 @@
     >
       Delete Event
     </button>
-    <!--
+
+    <a
+      [routerLink]="['event-detail', event.id]"
+      *ngFor="let event of eventsService.events"
+      >Go to event-detail</a
+    >
     <button
       mat-raised-button
       class="editEvent"
       type="submit"
-      (click)="editEvent(event)"
+      (click)="editEvent()"
     >
       Edit Event
-    </button> -->
+    </button>
   </div>
 </div>
 

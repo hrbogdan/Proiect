@@ -1,1 +1,81 @@
-<p>event-detail works!</p>
+<div fxLayoutAlign="center center" fxFlexFill class="team-main-div">
+  <mat-card id="add-event-mobile">
+    <mat-toolbar color="primary"
+      >Edit event
+      <input
+        [value]="selectedEvent.title"
+        [ngModel]="selectedEvent.title"
+        name="event"
+    /></mat-toolbar>
+    <form
+      fxLayoutAlign="stretch"
+      fxLayout="column"
+      class="edit-event-form"
+      (ngSubmit)="onSubmit(editEvent)"
+      #editEvent="ngForm"
+    >
+      <div style="display: none">
+        <input
+          [value]="selectedEvent.id"
+          [ngModel]="selectedEvent.id"
+          name="id"
+        />
+      </div>
+
+      <mat-form-field>
+        <input
+          matInput
+          placeholder="Trainer"
+          [value]="selectedEvent.trainer"
+          [ngModel]="selectedEvent.trainer"
+          type="text"
+          name="trainer"
+          required
+          autofocus
+        />
+      </mat-form-field>
+      <mat-form-field>
+        <textarea
+          matInput
+          placeholder="Description"
+          [value]="selectedEvent.description"
+          [ngModel]="selectedEvent.description"
+          type="text"
+          name="description"
+          required
+        ></textarea>
+      </mat-form-field>
+      <mat-form-field>
+        <input
+          matInput
+          placeholder="Date"
+          [value]="selectedEvent.date"
+          [ngModel]="selectedEvent.date"
+          type="date"
+          name="date"
+          required
+        />
+      </mat-form-field>
+      <mat-form-field>
+        <input
+          matInput
+          placeholder="Image url"
+          [value]="selectedEvent.image"
+          [ngModel]="selectedEvent.image"
+          type="text"
+          name="image"
+        />
+      </mat-form-field>
+
+      <button mat-raised-button class="addEvent" type="submit">
+        Edit Event
+      </button>
+      <div
+        *ngIf="editEvent.submitted"
+        style="font-size: 3vw; margin: 2.3rem auto"
+      >
+        Event edited!
+      </div>
+    </form></mat-card
+  >
+</div>

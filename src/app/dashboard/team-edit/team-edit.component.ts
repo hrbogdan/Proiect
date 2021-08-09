@@ -9,6 +9,7 @@ import { Member, TeamService } from 'src/app/service/team/team.service';
 })
 export class TeamEditComponent implements OnInit {
   constructor(public teamService: TeamService) {}
+
   checkTeamInputs() {
     const photo: any = document.getElementById('photo');
     const fullName: any = document.getElementById('fullName');

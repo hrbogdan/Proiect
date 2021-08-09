@@ -1,5 +1,5 @@
 .flex-container-error {
-  height: 100vh;
+  height: 85vh;
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -9,7 +9,7 @@
 
 .error-404 {
   margin-top: -50px;
-  width: 41%;
+  width: 55%;
   height: auto;
 }
 
