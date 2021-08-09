@@ -1,61 +1,55 @@
 {
   "events": [
     {
-      "title": "Alpinism",
-      "description": "Pe munte",
-      "trainer": "Alex",
-      "date": "2021-01-01",
-      "image": "https://unsplash.com/photos/ZB4zmR1vvMk",
+      "title": "Event nr.1",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "trainer": "Trainer nr.1",
+      "date": "2021-08-12",
+      "image": "https://unsplash.com/photos/ax3lbQfdXP0",
       "id": 1
     },
     {
-      "title": "Alexandru",
-      "description": "Pe munte",
-      "trainer": "Borbi",
-      "date": "2020-11-03",
-      "image": "dsadeqwe",
+      "title": "Event nr.2",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "trainer": "Trainer nr.2",
+      "date": "2021-08-13",
+      "image": "https://unsplash.com/photos/O1cHM7wcRXk",
       "id": 2
     },
     {
-      "title": "Haribos",
-      "description": "Pe munte",
-      "trainer": "Borbi",
-      "date": "2020-11-03",
-      "image": "dsadeqwe",
+      "title": "Event nr.3",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "trainer": "Trainer nr.3",
+      "date": "2021-08-12",
+      "image": "https://unsplash.com/photos/1gLdTsX3_70",
       "id": 3
+    },
+    {
+      "title": "Event nr. 4",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "trainer": "Trainer nr. 4",
+      "date": "2020-03-01",
+      "image": "https://unsplash.com/photos/ax3lbQfdXP0",
+      "id": 4
     }
   ],
   "contact": [
     {
-      "firstName": "alexandru",
-      "secondName": "ion",
-      "email": "a.ion@ion.com",
-      "message": "alexandrion",
+      "firstName": "Raicu ",
+      "secondName": "Hari-Bogdan",
+      "email": "hari@itfest.ro",
+      "message": "Dummy text",
       "id": 1
-    },
-    {
-      "firstName": "dsa",
-      "secondName": "dsaddd",
-      "email": "asdasd",
-      "message": "dsadsa",
-      "id": 2
-    },
-    {
-      "firstName": "alexandru",
-      "secondName": "ion",
-      "email": "a.ion@ion.com",
-      "message": "das",
-      "id": 3
     }
   ],
   "team": [
     {
       "photo": "https://unsplash.com/photos/ZB4zmR1vvMk",
-      "fullName": "Shiba",
+      "fullName": "Raicu Hari",
       "role": "Admin",
-      "phone": "000000000",
-      "mail": "aaaaaaa",
-      "id": 1
+      "phone": "0000 000 000",
+      "mail": "hari@itfest.ro",
+      "id": 2
     }
   ]
 }

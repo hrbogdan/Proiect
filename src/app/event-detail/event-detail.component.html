@@ -1,12 +1,8 @@
 <div fxLayoutAlign="center center" fxFlexFill class="team-main-div">
-  <mat-card id="add-event-mobile">
+  <mat-card id="edit-event-mobile">
     <mat-toolbar color="primary"
-      >Edit event
-      <input
-        [value]="selectedEvent.title"
-        [ngModel]="selectedEvent.title"
-        name="event"
-    /></mat-toolbar>
+      >Edit event <span> {{ selectedEvent.title }}</span></mat-toolbar
+    >
     <form
       fxLayoutAlign="stretch"
       fxLayout="column"

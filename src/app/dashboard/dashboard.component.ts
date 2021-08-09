@@ -18,8 +18,6 @@ export class DashboardComponent implements OnInit {
       this.eventsService.events = allEvents;
     });
 
-    // this.eventsService.getEvent(this.eventsService.selectedEvent.id)
-
     this.teamService.getMember().subscribe((allTeam: Member[]) => {
       this.teamService.member = allTeam;
     });

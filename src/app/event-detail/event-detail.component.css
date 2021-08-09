@@ -1,0 +1,17 @@
+.team-main-div {
+  padding: 0px;
+}
+
+.add-event-form {
+  padding: 20px;
+}
+
+#edit-event-mobile {
+  width: 45%;
+}
+
+@media only screen and (max-width: 800px) {
+  #add-event-mobile {
+    width: 90%;
+  }
+}

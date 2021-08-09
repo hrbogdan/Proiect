@@ -12,8 +12,14 @@ export class EventsComponent implements OnInit {
 
   ngOnInit(): void {
     this.eventsService.getEvents().subscribe((allEvents: Event[]) => {
-      console.log(allEvents);
       this.eventsService.events = allEvents;
+      // for (let index = 0; index < this.eventsService.events.length; index++) {
+      //   let object = this.eventsService.events[index];
+      //   let id = object.id;
+      //   let image = object.image;
+      //   console.log(id);
+      //   console.log(image);
+      // }
     });
   }
 }

@@ -20,13 +20,10 @@ export class EventDetailComponent implements OnInit {
 
   ngOnInit(): void {
     this.id = this.route.snapshot.params['id'];
-    console.log(this.id);
     this.eventsService.getEvent(this.id).subscribe((event: Event) => {
       this.selectedEvent = event;
-      console.log(this.selectedEvent);
       return this.selectedEvent;
     });
-    console.log(this.selectedEvent);
   }
 
   public onSubmit(form: NgForm) {
@@ -34,9 +31,7 @@ export class EventDetailComponent implements OnInit {
       .getEvent(this.selectedEvent.id)
       .subscribe((event: Event) => {
         event = form.value;
-        console.log(event);
         this.selectedEvent = event;
-        console.log(this.selectedEvent);
         this.eventsService.editEvent(this.selectedEvent).subscribe();
       });
   }
