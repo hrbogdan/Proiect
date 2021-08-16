@@ -19,6 +19,7 @@ export class BodyComponent implements OnInit {
   public addEvent(form: NgForm) {
     this.eventsService.addEvent(form.value).subscribe((newEvent: Event) => {
       this.eventsService.events.push(newEvent);
+      form.resetForm();
     });
   }
 }

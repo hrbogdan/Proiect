@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { EventService, Event } from '../service/event/event.service';
 import { Member, TeamService } from '../service/team/team.service';
 
@@ -10,7 +11,8 @@ import { Member, TeamService } from '../service/team/team.service';
 export class DashboardComponent implements OnInit {
   constructor(
     public eventsService: EventService,
-    public teamService: TeamService
+    public teamService: TeamService,
+    public route: ActivatedRoute
   ) {}
 
   ngOnInit(): void {
@@ -43,9 +45,5 @@ export class DashboardComponent implements OnInit {
             (f: Member) => f.id !== member.id
           ))
       );
-  }
-
-  public editEvent() {
-    console.log('Salut');
   }
 }

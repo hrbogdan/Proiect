@@ -30,16 +30,14 @@ export class TeamEditComponent implements OnInit {
 
   ngOnInit(): void {
     this.teamService.getMember().subscribe((allTeam: Member[]) => {
-      console.log(allTeam);
       this.teamService.member = allTeam;
     });
   }
 
   public addMember(form: NgForm) {
-    console.log(form.value);
-    console.log(this.teamService.member);
     this.teamService.addMember(form.value).subscribe((newMember: Member) => {
       this.teamService.member.push(newMember);
+      form.resetForm();
     });
   }
 }

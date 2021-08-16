@@ -19,6 +19,8 @@ import { TextFieldModule } from '@angular/cdk/text-field';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableModule } from '@angular/material/table';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatSortModule } from '@angular/material/sort';
 
 // Components
 import { AdminPanelComponent } from './admin-panel/admin-panel.component';
@@ -65,6 +67,8 @@ import { TeamEditComponent } from './dashboard/team-edit/team-edit.component';
     MatToolbarModule,
     MatPaginatorModule,
     MatTableModule,
+    MatSortModule,
+    MatGridListModule,
     TextFieldModule,
     FlexLayoutModule,
   ],

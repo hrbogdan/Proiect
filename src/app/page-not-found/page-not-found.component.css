@@ -1,5 +1,5 @@
 .flex-container-error {
-  height: 85vh;
+  height: 80vh;
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -9,7 +9,7 @@
 
 .error-404 {
   margin-top: -50px;
-  width: 55%;
+  width: 45%;
   height: auto;
 }
 
@@ -28,10 +28,17 @@
   border-radius: 20px;
 }
 
+.button-to-home:hover {
+  background-color: #2482a9;
+}
+
 @media only screen and (max-width: 800px) {
+  .flex-container-error {
+    height: 65vh;
+  }
   .error-404 {
     margin-top: 0;
-    width: 71%;
+    width: 61%;
   }
   .button-to-home {
     font-size: 1.5rem;

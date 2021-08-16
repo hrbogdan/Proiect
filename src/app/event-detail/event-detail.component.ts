@@ -11,7 +11,6 @@ import { EventService, Event } from '../service/event/event.service';
 export class EventDetailComponent implements OnInit {
   public id: number = 0;
   public selectedEvent!: Event;
-  public editedEvent: Event[] = [];
 
   constructor(
     public eventsService: EventService,
@@ -22,7 +21,6 @@ export class EventDetailComponent implements OnInit {
     this.id = this.route.snapshot.params['id'];
     this.eventsService.getEvent(this.id).subscribe((event: Event) => {
       this.selectedEvent = event;
-      return this.selectedEvent;
     });
   }
 

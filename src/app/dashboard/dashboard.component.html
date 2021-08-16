@@ -1,44 +1,36 @@
-<div class="events-edit-section">
-  <app-body></app-body>
-
-  <div *ngFor="let event of eventsService.events">
-    {{ event.title }}
-    <button
-      mat-raised-button
-      class="deleteEvent"
-      type="submit"
-      (click)="deleteEvent(event)"
-    >
-      Delete Event
-    </button>
-
-    <a
-      [routerLink]="['event-detail', event.id]"
-      *ngFor="let event of eventsService.events"
-      >Go to event-detail</a
-    >
-    <button
-      mat-raised-button
-      class="editEvent"
-      type="submit"
-      (click)="editEvent()"
-    >
-      Edit Event
-    </button>
-  </div>
-</div>
-
-<div class="team-edit-section">
-  <app-team-edit></app-team-edit>
-  <div *ngFor="let team of teamService.member">
-    {{ team.fullName }}
-    <button
-      mat-raised-button
-      class="deleteMember"
-      type="submit"
-      (click)="deleteMember(team)"
-    >
-      Delete member
-    </button>
-  </div>
-</div>
+<mat-grid-list cols="2" rowHeight="2:1">
+  <mat-grid-tile class="form-tile"><app-body></app-body></mat-grid-tile>
+  <mat-grid-tile>
+    <div *ngFor="let event of eventsService.events">
+      <button mat-raised-button>
+        <a class="goToEvent" [routerLink]="['event-detail', event.id]"
+          >Edit {{ event.title }}</a
+        >
+      </button>
+      <button
+        mat-raised-button
+        class="deleteEvent"
+        type="submit"
+        (click)="deleteEvent(event)"
+      >
+        Delete Event
+      </button>
+    </div>
+  </mat-grid-tile>
+  <mat-grid-tile class="form-tile"
+    ><app-team-edit></app-team-edit
+  ></mat-grid-tile>
+  <mat-grid-tile
+    ><div *ngFor="let team of teamService.member">
+      {{ team.fullName }}
+      <button
+        mat-raised-button
+        class="deleteMember"
+        type="submit"
+        (click)="deleteMember(team)"
+      >
+        Delete member
+      </button>
+    </div></mat-grid-tile
+  >
+</mat-grid-list>

@@ -1,4 +1,9 @@
-<div fxLayoutAlign="center center" fxFlexFill class="team-main-div">
+<div
+  fxLayoutAlign="center center"
+  fxFlexFill
+  class="team-main-div"
+  *ngIf="selectedEvent"
+>
   <mat-card id="edit-event-mobile">
     <mat-toolbar color="primary"
       >Edit event <span> {{ selectedEvent.title }}</span></mat-toolbar

@@ -8,11 +8,12 @@
 }
 .wrapper h1.glitch {
   color: white;
-  font-family: sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 800;
   position: relative;
   font-size: 100px;
   padding: 30px;
+  transform: scale(2);
 }
 .wrapper h1.glitch::before,
 .wrapper h1.glitch::after {
@@ -173,32 +174,4 @@
   100% {
     clip: rect(53px, 350px, 28px, 30px);
   }
-}
-
-/* home buttons */
-.btns {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-}
-
-.btn1,
-.btn2 {
-  font-size: 2rem;
-
-  width: auto;
-  min-width: 140px;
-  height: auto;
-  padding: 0 1rem 0 1rem;
-  color: #ffffff;
-  background-color: rgba(10, 10, 51, 0.9);
-  font-weight: bold;
-  text-align: center;
-  line-height: 70px;
-  border-radius: 20px;
-}
-
-.btn1:hover,
-.btn2:hover {
-  background-color: #2482a9;
 }
