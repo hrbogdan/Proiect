@@ -15,6 +15,8 @@ import { Member, TeamService } from '../service/team/team.service';
 export class DashboardComponent implements OnInit {
   title: any;
   p: number = 1;
+  q: number = 1;
+  r: number = 1;
 
   constructor(
     public eventsService: EventService,

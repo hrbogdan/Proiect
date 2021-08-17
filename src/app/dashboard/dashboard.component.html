@@ -17,7 +17,7 @@
           placeholder="Enter the event title"
         />
       </nav>
-      <table class="table table-bordered">
+      <table class="table table-bordered event">
         <thead>
           <tr>
             <th (click)="sort('id')">Event id <i class="fas fa-sort"></i></th>
@@ -77,21 +77,13 @@
 
     <!-- Our team members table & Delete member -->
     <div class="col content">
-      <table class="table table-bordered">
+      <table class="table table-bordered ourTeam">
         <thead>
           <tr>
-            <th (click)="sort('fullName')">
-              Member full name <i class="fas fa-sort"></i>
-            </th>
-            <th (click)="sort('role')">
-              Member's role <i class="fas fa-sort"></i>
-            </th>
-            <th (click)="sort('phone')">
-              Phone number <i class="fas fa-sort"></i>
-            </th>
-            <th (click)="sort('email')">
-              Email adress <i class="fas fa-sort"></i>
-            </th>
+            <th>Member full name</th>
+            <th>Member's role</th>
+            <th>Phone number</th>
+            <th>Email adress</th>
             <th>Delete member</th>
           </tr>
         </thead>
@@ -99,8 +91,7 @@
           <tr
             *ngFor="
               let team of teamService.member
-                | orderBy: key:reverse
-                | paginate: { itemsPerPage: 5, currentPage: p }
+                | paginate: { itemsPerPage: 5, currentPage: q }
             "
           >
             <td>{{ team.fullName }}</td>
@@ -119,7 +110,7 @@
             </td>
           </tr>
         </tbody>
-        <pagination-controls (pageChange)="p = $event"></pagination-controls>
+        <pagination-controls (pageChange)="q = $event"></pagination-controls>
       </table>
     </div>
     <div class="w-100"></div>
@@ -129,14 +120,10 @@
       <table class="table table-bordered">
         <thead>
           <tr>
-            <th (click)="sort('id')">Message id <i class="fas fa-sort"></i></th>
-            <th (click)="sort('firstName')">
-              First name <i class="fas fa-sort"></i>
-            </th>
-            <th (click)="sort('secondName')">
-              Second name <i class="fas fa-sort"></i>
-            </th>
-            <th (click)="sort('email')">Email <i class="fas fa-sort"></i></th>
+            <th>Message id</th>
+            <th>First name</th>
+            <th>Second name</th>
+            <th>Email</th>
             <th>Messages</th>
           </tr>
         </thead>
@@ -144,8 +131,7 @@
           <tr
             *ngFor="
               let contact of contactService.contacts
-                | orderBy: key:reverse
-                | paginate: { itemsPerPage: 5, currentPage: p }
+                | paginate: { itemsPerPage: 5, currentPage: r }
             "
           >
             <td>{{ contact.id }}</td>
@@ -155,7 +141,7 @@
             <td>{{ contact.message }}</td>
           </tr>
         </tbody>
-        <pagination-controls (pageChange)="p = $event"></pagination-controls>
+        <pagination-controls (pageChange)="r = $event"></pagination-controls>
       </table>
     </div>
   </div>
