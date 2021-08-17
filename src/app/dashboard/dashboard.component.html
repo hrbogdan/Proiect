@@ -1,36 +1,162 @@
-<mat-grid-list cols="2" rowHeight="2:1">
-  <mat-grid-tile class="form-tile"><app-body></app-body></mat-grid-tile>
-  <mat-grid-tile>
-    <div *ngFor="let event of eventsService.events">
-      <button mat-raised-button>
-        <a class="goToEvent" [routerLink]="['event-detail', event.id]"
-          >Edit {{ event.title }}</a
-        >
-      </button>
-      <button
-        mat-raised-button
-        class="deleteEvent"
-        type="submit"
-        (click)="deleteEvent(event)"
-      >
-        Delete Event
-      </button>
+<div class="container-fluid">
+  <div class="row align-items-center">
+    <!-- Add event Form -->
+    <div class="col">
+      <app-body></app-body>
     </div>
-  </mat-grid-tile>
-  <mat-grid-tile class="form-tile"
-    ><app-team-edit></app-team-edit
-  ></mat-grid-tile>
-  <mat-grid-tile
-    ><div *ngFor="let team of teamService.member">
-      {{ team.fullName }}
-      <button
-        mat-raised-button
-        class="deleteMember"
-        type="submit"
-        (click)="deleteMember(team)"
-      >
-        Delete member
-      </button>
-    </div></mat-grid-tile
-  >
-</mat-grid-list>
+
+    <!-- Edit & delete events table-->
+    <div class="col content-1">
+      <nav class="navbar event-shearch">
+        <input
+          class="form-control-event"
+          type="text"
+          name="title"
+          [(ngModel)]="this.title"
+          (ngModelChange)="Search()"
+          placeholder="Enter the event title"
+        />
+      </nav>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th (click)="sort('id')">Event id <i class="fas fa-sort"></i></th>
+            <th (click)="sort('title')">
+              Event title <i class="fas fa-sort"></i>
+            </th>
+            <th (click)="sort('trainer')">
+              Trainer <i class="fas fa-sort"></i>
+            </th>
+            <th (click)="sort('date')">Date <i class="fas fa-sort"></i></th>
+            <th>Edit event</th>
+            <th>Delete event</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            *ngFor="
+              let event of eventsService.events
+                | orderBy: key:reverse
+                | paginate: { itemsPerPage: 5, currentPage: p }
+            "
+          >
+            <td>{{ event.id }}</td>
+            <td>{{ event.title }}</td>
+            <td>{{ event.trainer }}</td>
+            <td>{{ event.date }}</td>
+            <td>
+              <button mat-raised-button>
+                <a class="goToEvent" [routerLink]="['event-detail', event.id]"
+                  >Edit {{ event.title }}</a
+                >
+              </button>
+            </td>
+            <td>
+              <button
+                mat-raised-button
+                class="deleteEvent"
+                type="submit"
+                (click)="deleteEvent(event)"
+              >
+                Delete Event
+              </button>
+            </td>
+          </tr>
+        </tbody>
+        <pagination-controls (pageChange)="p = $event"></pagination-controls>
+      </table>
+    </div>
+
+    <!-- Line breaker -->
+    <div class="w-100"></div>
+
+    <!-- Add our team member Form -->
+    <div class="col">
+      <app-team-edit></app-team-edit>
+    </div>
+
+    <!-- Our team members table & Delete member -->
+    <div class="col content">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th (click)="sort('fullName')">
+              Member full name <i class="fas fa-sort"></i>
+            </th>
+            <th (click)="sort('role')">
+              Member's role <i class="fas fa-sort"></i>
+            </th>
+            <th (click)="sort('phone')">
+              Phone number <i class="fas fa-sort"></i>
+            </th>
+            <th (click)="sort('email')">
+              Email adress <i class="fas fa-sort"></i>
+            </th>
+            <th>Delete member</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            *ngFor="
+              let team of teamService.member
+                | orderBy: key:reverse
+                | paginate: { itemsPerPage: 5, currentPage: p }
+            "
+          >
+            <td>{{ team.fullName }}</td>
+            <td>{{ team.role }}</td>
+            <td>{{ team.phone }}</td>
+            <td>{{ team.mail }}</td>
+            <td>
+              <button
+                mat-raised-button
+                class="deleteMember"
+                type="submit"
+                (click)="deleteMember(team)"
+              >
+                Delete member
+              </button>
+            </td>
+          </tr>
+        </tbody>
+        <pagination-controls (pageChange)="p = $event"></pagination-controls>
+      </table>
+    </div>
+    <div class="w-100"></div>
+
+    <!-- Messages from contact Form -->
+    <div class="col-6 content">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th (click)="sort('id')">Message id <i class="fas fa-sort"></i></th>
+            <th (click)="sort('firstName')">
+              First name <i class="fas fa-sort"></i>
+            </th>
+            <th (click)="sort('secondName')">
+              Second name <i class="fas fa-sort"></i>
+            </th>
+            <th (click)="sort('email')">Email <i class="fas fa-sort"></i></th>
+            <th>Messages</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            *ngFor="
+              let contact of contactService.contacts
+                | orderBy: key:reverse
+                | paginate: { itemsPerPage: 5, currentPage: p }
+            "
+          >
+            <td>{{ contact.id }}</td>
+            <td>{{ contact.firstName }}</td>
+            <td>{{ contact.secondName }}</td>
+            <td>{{ contact.email }}</td>
+            <td>{{ contact.message }}</td>
+          </tr>
+        </tbody>
+        <pagination-controls (pageChange)="p = $event"></pagination-controls>
+      </table>
+    </div>
+  </div>
+</div>

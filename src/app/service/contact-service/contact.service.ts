@@ -23,5 +23,6 @@ export interface Contact {
   id: number;
   firstName: string;
   secondName: string;
+  email: string;
   message: string;
 }

@@ -2,3 +2,19 @@
   color: #000000;
   text-decoration: none;
 }
+
+.col,
+.col-6 {
+  padding: 15px;
+}
+
+nav {
+  width: 100px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}

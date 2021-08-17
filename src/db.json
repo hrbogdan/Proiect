@@ -25,20 +25,28 @@
       "id": 3
     },
     {
-      "title": "Event nr. 4",
+      "title": "Event nr.4",
       "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-      "trainer": "Trainer nr. 4",
+      "trainer": "Trainer nr.4",
       "date": "2020-03-01",
       "image": "https://unsplash.com/photos/ax3lbQfdXP0",
       "id": 4
     },
     {
-      "title": "Event nr. 5",
+      "id": 5,
+      "title": "Event nr.5",
+      "trainer": "Trainer nr.5",
+      "description": "Lorem ipsum",
+      "date": "2021-08-20",
+      "image": "https://unsplash.com/photos/ax3lbQfdXP0"
+    },
+    {
+      "title": "Event nr.6",
       "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-      "trainer": "Trainer nr. 5",
-      "date": "2023-10-03",
+      "trainer": "Trainer nr.6",
+      "date": "2020-02-01",
       "image": "https://unsplash.com/photos/ZB4zmR1vvMk",
-      "id": 5
+      "id": 6
     }
   ],
   "contact": [
@@ -48,6 +56,13 @@
       "email": "hari@itfest.ro",
       "message": "Dummy text",
       "id": 1
+    },
+    {
+      "firstName": "alexandru",
+      "secondName": "ion",
+      "email": "a.ion@ion.com",
+      "message": "g",
+      "id": 2
     }
   ],
   "team": [

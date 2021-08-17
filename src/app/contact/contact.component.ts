@@ -25,7 +25,5 @@ export class ContactComponent implements OnInit {
         this.contactsService.contacts.push(newContact);
       });
     form.resetForm();
-
-    alert(form.submitted);
   }
 }

@@ -26,6 +26,18 @@
       <mat-form-field>
         <input
           matInput
+          placeholder="Event title"
+          [value]="selectedEvent.title"
+          [ngModel]="selectedEvent.title"
+          type="text"
+          name="title"
+          required
+          autofocus
+        />
+      </mat-form-field>
+      <mat-form-field>
+        <input
+          matInput
           placeholder="Trainer"
           [value]="selectedEvent.trainer"
           [ngModel]="selectedEvent.trainer"

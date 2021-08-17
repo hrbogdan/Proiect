@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import {
+  Contact,
+  ContactService,
+} from '../service/contact-service/contact.service';
 import { EventService, Event } from '../service/event/event.service';
 import { Member, TeamService } from '../service/team/team.service';
 
@@ -9,9 +13,13 @@ import { Member, TeamService } from '../service/team/team.service';
   styleUrls: ['./dashboard.component.css'],
 })
 export class DashboardComponent implements OnInit {
+  title: any;
+  p: number = 1;
+
   constructor(
     public eventsService: EventService,
     public teamService: TeamService,
+    public contactService: ContactService,
     public route: ActivatedRoute
   ) {}
 
@@ -22,6 +30,10 @@ export class DashboardComponent implements OnInit {
 
     this.teamService.getMember().subscribe((allTeam: Member[]) => {
       this.teamService.member = allTeam;
+    });
+
+    this.contactService.getContacts().subscribe((allContacts: Contact[]) => {
+      this.contactService.contacts = allContacts;
     });
   }
 
@@ -45,5 +57,24 @@ export class DashboardComponent implements OnInit {
             (f: Member) => f.id !== member.id
           ))
       );
+  }
+
+  Search() {
+    if (this.title == '') {
+      this.ngOnInit();
+    } else {
+      this.eventsService.events = this.eventsService.events.filter((ts) => {
+        return ts.title
+          .toLocaleLowerCase()
+          .match(this.title.toLocaleLowerCase());
+      });
+    }
+  }
+
+  key: string = 'id';
+  reverse: boolean = false;
+  sort(key: string) {
+    this.key = key;
+    this.reverse = !this.reverse;
   }
 }

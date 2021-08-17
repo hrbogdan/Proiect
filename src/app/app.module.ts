@@ -17,10 +17,12 @@ import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { TextFieldModule } from '@angular/cdk/text-field';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { MatPaginatorModule } from '@angular/material/paginator';
-import { MatTableModule } from '@angular/material/table';
 import { MatGridListModule } from '@angular/material/grid-list';
-import { MatSortModule } from '@angular/material/sort';
+
+// NG search, sort, pagination modules
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { Ng2OrderModule } from 'ng2-order-pipe';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 // Components
 import { AdminPanelComponent } from './admin-panel/admin-panel.component';
@@ -65,12 +67,12 @@ import { TeamEditComponent } from './dashboard/team-edit/team-edit.component';
     MatButtonModule,
     MatCardModule,
     MatToolbarModule,
-    MatPaginatorModule,
-    MatTableModule,
-    MatSortModule,
     MatGridListModule,
     TextFieldModule,
     FlexLayoutModule,
+    Ng2OrderModule,
+    Ng2SearchPipeModule,
+    NgxPaginationModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
