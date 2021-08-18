@@ -175,3 +175,13 @@
     clip: rect(53px, 350px, 28px, 30px);
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .wrapper {
+    height: 70vh;
+  }
+
+  .wrapper h1.glitch {
+    transform: scale(1);
+  }
+}

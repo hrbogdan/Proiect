@@ -22,7 +22,6 @@ export class AdminPanelComponent implements OnInit {
       return;
     }
     this.checkCredentials(signInForm);
-    // console.log(signInForm.value);
   }
 
   private checkCredentials(signInForm: NgForm) {
