@@ -58,10 +58,13 @@
         <button mat-raised-button type="submit" [disabled]="!contactForm.valid">
           Send it
         </button>
+        <div
+          id="messageSent"
+          style="font-size: 3vw; margin: 2.3rem auto; display: none"
+        >
+          Message was sent!
+        </div>
       </form>
     </mat-card>
-    <!-- <div style="width: 500px; height: 500px" *ngIf="contactForm.submitted">
-    Your message was sent.
-  </div> -->
   </div>
 </div>

@@ -1,0 +1,46 @@
+* {
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+p {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+.title,
+.image,
+.our-members {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+
+.description {
+  padding: 20px;
+}
+
+.our-members {
+  padding: 100px 0 60px 0;
+  transform: scale(3);
+}
+
+.title {
+  padding: 100px 0 100px 0;
+  transform: scale(3);
+}
+
+.team {
+  margin-top: 50px;
+}
+
+@media only screen and (max-width: 600px) {
+  .title {
+    padding: 50px 0 50px 0;
+    transform: scale(1);
+  }
+}

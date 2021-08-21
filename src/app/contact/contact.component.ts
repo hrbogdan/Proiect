@@ -24,6 +24,11 @@ export class ContactComponent implements OnInit {
       .subscribe((newContact: Contact) => {
         this.contactsService.contacts.push(newContact);
       });
+    if (form.submitted) {
+      let messageSent = document.getElementById('messageSent');
+      messageSent!.style.display = 'block';
+    }
+    console.log(form.submitted);
     form.resetForm();
   }
 }

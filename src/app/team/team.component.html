@@ -1,1 +1,64 @@
-<p>team works!</p>
+<div class="team4">
+  <div class="container">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4">
+      <!-- column  -->
+      <div
+        class="col team-member-card"
+        *ngFor="let member of teamService.member"
+      >
+        <!-- Row -->
+
+        <div class="col-md-12">
+          <img
+            src="assets/img/member.png"
+            alt="member"
+            class="img-fluid rounded-circle"
+          />
+        </div>
+        <div class="col-md-12 text-center">
+          <div class="pt-2">
+            <h5 class="mt-4 font-weight-medium mb-0">{{ member.fullName }}</h5>
+            <h6 class="subtitle mb-3">{{ member.role }}</h6>
+            <p>
+              You can relay on our amazing features list and also our customer
+              services will be great experience.
+            </p>
+            <div class="member-contact-details">
+              <div class="phone">
+                <i class="fas fa-phone-alt"> </i>
+                {{ member.phone }}
+              </div>
+              <div class="mail">
+                <i class="far fa-envelope"> </i> {{ member.mail }}
+              </div>
+            </div>
+            <ul class="list-inline">
+              <li class="list-inline-item">
+                <a href="#" class="text-decoration-none d-block px-1"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#" class="text-decoration-none d-block px-1"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#" class="text-decoration-none d-block px-1"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#" class="text-decoration-none d-block px-1"
+                  ><i class="fab fa-behance"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Row -->
+    </div>
+    <!-- column  -->
+  </div>
+</div>

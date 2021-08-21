@@ -47,6 +47,14 @@
       "date": "2020-02-01",
       "image": "https://unsplash.com/photos/ZB4zmR1vvMk",
       "id": 6
+    },
+    {
+      "title": "Hackathon",
+      "description": "Concurs pe echipe",
+      "trainer": "Raicu Hari",
+      "date": "2022-12-01",
+      "image": "https://unsplash.com/photos/ZB4zmR1vvMk",
+      "id": 7
     }
   ],
   "contact": [
@@ -63,6 +71,55 @@
       "email": "a.ion@ion.com",
       "message": "g",
       "id": 2
+    },
+    {
+      "firstName": "Raicu",
+      "secondName": "Hari",
+      "email": "raicubogdan811@gmail.com",
+      "message": "Test",
+      "id": 3
+    },
+    {
+      "firstName": "Catalina ",
+      "secondName": "Condrea",
+      "email": "catalina@itfest.ro",
+      "message": "Test2",
+      "id": 4
+    },
+    {
+      "firstName": "Catalin",
+      "secondName": "Langeanu",
+      "email": "catalin@itfest.ro",
+      "message": "lorem ipsum",
+      "id": 5
+    },
+    {
+      "firstName": "Narcisa",
+      "secondName": "Popescu",
+      "email": "narcisa@itfest.ro",
+      "message": "Cats",
+      "id": 6
+    },
+    {
+      "firstName": "Raicu",
+      "secondName": "Bogdan",
+      "email": "hari@itfest.ro",
+      "message": "cats",
+      "id": 7
+    },
+    {
+      "firstName": "Raicu",
+      "secondName": "Hari",
+      "email": "hari@itfest.ro",
+      "message": "Nothing",
+      "id": 8
+    },
+    {
+      "firstName": "Raicu",
+      "secondName": "Hari-Bogdan",
+      "email": "hari@itfest.ro",
+      "message": "Cum esti?",
+      "id": 9
     }
   ],
   "team": [
@@ -79,16 +136,40 @@
       "fullName": "Cătălina Condrea",
       "role": "Admin",
       "phone": "0000 000 000",
-      "mail": "bbbbbb",
+      "mail": "catalina@itfest.ro",
       "id": 3
     },
     {
       "photo": "https://unsplash.com/photos/ZB4zmR1vvMk",
-      "fullName": "Cătălina Condrea",
+      "fullName": "Cătălin Langeanu",
+      "role": "Superviser",
+      "phone": "0000 000 000",
+      "mail": "catalin@itfest.ro",
+      "id": 5
+    },
+    {
+      "photo": "https://unsplash.com/photos/ZB4zmR1vvMk",
+      "fullName": "Dumitru Orban",
+      "role": "Fundraiser",
+      "phone": "0000 000 000",
+      "mail": "dumitru@itfest.ro",
+      "id": 6
+    },
+    {
+      "photo": "https://unsplash.com/photos/ZB4zmR1vvMk",
+      "fullName": "Maria Iosub",
       "role": "Designer",
       "phone": "0000 000 000",
-      "mail": "bbbbbb",
-      "id": 4
+      "mail": "maria@itfest.ro",
+      "id": 7
+    },
+    {
+      "photo": "https://unsplash.com/photos/ZB4zmR1vvMk",
+      "fullName": "Diana Dăscălescu",
+      "role": "Marketing",
+      "phone": "0000 000 000",
+      "mail": "diana@itfest.ro",
+      "id": 8
     }
   ]
 }
