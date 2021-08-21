@@ -28,7 +28,6 @@ export class ContactComponent implements OnInit {
       let messageSent = document.getElementById('messageSent');
       messageSent!.style.display = 'block';
     }
-    console.log(form.submitted);
     form.resetForm();
   }
 }
